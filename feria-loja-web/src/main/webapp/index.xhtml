@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+    <f:facet name="first">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=UTF-8"
+            http-equiv="Content-Type" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Ferias Loja</title>
+    </f:facet>
+    <f:facet name="middle">
+        <!-- Fontawesome -->
+        <h:outputStylesheet library="css"
+            name="font-awesome-4.7.0.min.css" />
+    </f:facet>
+</h:head>
+
+<h:body>
+    <f:facet name="last">
+        <h:outputStylesheet library="css" name="siete-primefaces.css" />
+        <!-- Latest compiled and minified CSS -->
+        <h:outputStylesheet library="css" name="bootstrap-4.0.0-beta.2.min.css" />
+        <h:outputStylesheet library="css" name="fuente-iconos.css" />
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" pt:integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" pt:crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" pt:integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" pt:crossorigin="anonymous"></script>
+        <h:outputScript library="js" name="bootstrap-4.0.0-beta.2.min.js" />
+    </f:facet>
+
+    <!-- Cargando -->
+    <p:ajaxStatus onstart="PF('statusDialog').show()" 
+            onsuccess="PF('statusDialog').hide()" />
+    
+    <p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+            closable="false" resizable="false" showHeader="false"
+            class="px-2" responsive="true">
+            <div class="row pl-3">
+                <h:graphicImage library="images" name="cargando.gif" />
+            </div>
+    </p:dialog>
+    
+    <header class="navbar fixed-top navbar-dark bg-dark">
+          <span class="navbar-brand mb-0 h1">Ferias Loja</span>
+    </header>
+    <div class="container pt-2">
+        <div class="row">
+            <h:form>
+                <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity" />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip" />
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck" />
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+            </h:form>
+        </div>
+    </div>
+
+    <footer id="pie">
+        <span id="proyecto">Ferias Loja</span>
+        <span id="autor">Leonardo Morales</span>
+    </footer>
+</h:body>
+</html>
