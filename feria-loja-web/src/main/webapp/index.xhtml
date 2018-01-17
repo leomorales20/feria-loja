@@ -1,137 +1,137 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:f="http://xmlns.jcp.org/jsf/core"
-    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-    xmlns:p="http://primefaces.org/ui"
-    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
-    <f:facet name="first">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta content="text/html; charset=UTF-8"
-            http-equiv="Content-Type" />
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Ferias Loja</title>
-    </f:facet>
-    <f:facet name="middle">
-        <!-- Fontawesome -->
-        <h:outputStylesheet library="css"
-            name="font-awesome-4.7.0.min.css" />
-    </f:facet>
+	<f:facet name="first">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Ferias Loja</title>
+	</f:facet>
+	<f:facet name="middle">
+		<!-- Fontawesome -->
+		<h:outputStylesheet library="css" name="font-awesome-4.7.0.min.css" />
+	</f:facet>
 </h:head>
 
 <h:body>
-    <f:facet name="last">
-        <h:outputStylesheet library="css" name="siete-primefaces.css" />
-        <!-- Latest compiled and minified CSS -->
-        <h:outputStylesheet library="css" name="bootstrap-4.0.0-beta.2.min.css" />
-        <h:outputStylesheet library="css" name="fuente-iconos.css" />
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" pt:integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" pt:crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" pt:integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" pt:crossorigin="anonymous"></script>
-        <h:outputScript library="js" name="bootstrap-4.0.0-beta.2.min.js" />
-    </f:facet>
+	<f:facet name="last">
+		<!-- Latest compiled and minified CSS -->
+		<h:outputStylesheet library="css"
+			name="bootstrap-4.0.0-beta.2.min.css" />
+		<h:outputStylesheet library="css" name="fuente-iconos.css" />
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			pt:integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			pt:crossorigin="anonymous"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+			pt:integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+			pt:crossorigin="anonymous"></script>
+		<h:outputScript library="js" name="bootstrap-4.0.0-beta.2.min.js" />
+	</f:facet>
 
-    <!-- Cargando -->
-    <p:ajaxStatus onstart="PF('statusDialog').show()" 
-            onsuccess="PF('statusDialog').hide()" />
-    
-    <p:dialog widgetVar="statusDialog" modal="true" draggable="false"
-            closable="false" resizable="false" showHeader="false"
-            class="px-2" responsive="true">
-            <div class="row pl-3">
-                <h:graphicImage library="images" name="cargando.gif" />
-            </div>
-    </p:dialog>
-    
-    <header class="navbar navbar-dark bg-dark">
-          <span class="navbar-brand mb-0 h1">Ferias Loja</span>
-    </header>
-    <div class="container py-2">
-        <div class="row">
-            <h:form>
-                     
-                     
-                
-                <div class="form-row">
-                
-                  <div class="form-group col-md-6">
-                <label for="inputNombre">Nombre</label>
-                <input type="text" class="form-control" id="Name" placeholder="User Name" />
-              </div>   
-                                         
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
-                </div>
-                <div class="form-group col-md-4">
-                  <label for="inputPais">Pais</label>
-                  <input type="text" class="form-control" id="Pais" placeholder="Ecuador" />
-                                   
-                </div>
-                
-                 <div class="form-group">
-                <label for="inputCiudad">Ciudad</label>
-                <input type="text" class="form-control" id="Ciudad" placeholder="Loja" />
-              </div>        
-                                        
-                                
-               </div>
-                <div class="form-group">
-                <label for="inputRucDni">RUC/DNI</label>
-                <input type="text" class="form-control" id="RucDni" placeholder="1716284563001" />
-               </div>
-               
-                <div class="form-group col-md-6">
-                <label for="inputfiguraLegal">Figura Legal</label>
-                <input type="text" class="form-control" id="figuraLegal" placeholder="Persona Natural / Juridica" />
-              </div> 
-               
-              <div class="form-group">
-                <label for="inputDireccion">Direccion</label>
-                <input type="text" class="form-control" id="Direccción" placeholder="Calle principal,secundaria, numero de casa" />
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-4">
-                  <label for="inputTelefono">Telefono</label>
-                  <input type="text" class="form-control" id="Telefono" />
-                </div>
-                <div class="form-group col-md-2">
-                  <label for="inputareaStand">Area Requerida</label>
-                  <select id="inputareaStand" class="form-control">
-                    <option>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-2">
-                  <label for="inputnumeroStand">Numero de Stands</label>
-                  <input type="text" class="form-control" id="inputnumeroStand" />
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <label for="inputdescripcionProducto">Descripción de Producto</label>
-                <input type="text" class="form-control" id="descripcionProducto" placeholder="Descripción de producto a ofertar en la feria" />
-              </div>
-              
-                           
-              
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck" />
-                  <label class="form-check-label" for="gridCheck">
-                    Check me out
-                  </label>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary">Sign in</button>
-            </h:form>
-        </div>
-    </div>
+	<!-- Cargando -->
+	<p:ajaxStatus onstart="PF('statusDialog').show()"
+		onsuccess="PF('statusDialog').hide()" />
 
-    <footer class="d-flex justify-content-center text-light bg-dark">
-        <span>Ferias Loja - Leonardo Morales</span>
-    </footer>
+	<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+		closable="false" resizable="false" showHeader="false" class="px-2"
+		responsive="true">
+		<div class="row pl-3">
+			<h:graphicImage library="images" name="cargando.gif" />
+		</div>
+	</p:dialog>
+
+	<header class="navbar navbar-dark bg-dark"> 
+		<span class="navbar-brand mb-0 h1">Ferias Loja</span> 
+	</header>
+	<div class="container py-2">
+		<div class="row">
+			<h:form>
+				<p:messages closable="true" autoUpdate="true" />
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<h:graphicImage name="/images/logo1.jpg" id="nature1" style="height: 77px; width: 100px" />
+					</div>
+					<div class="form-group col-md-6">
+						<h:graphicImage name="/images/logo2.jpg" id="nature2" style="height: 77px; width: 100px" />  
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputNombre">Nombre y Apellido</label> 
+						<p:inputText class="form-control" id="inputNombre" pt:placeholder="Ejemplo: Pepe Altamirano" required="true" />
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputEmail">Email</label> 
+						<p:inputText class="form-control" id="inputEmail" pt:placeholder="Ejemplo: correo@dominio.com" required="true" />
+					</div>
+					
+					<div class="form-group col-md-6">
+						<label for="inputPais">País</label> 
+						<p:inputText class="form-control" id="inputPais" pt:placeholder="Ejemplo: Ecuador" required="true" />
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputCiudad">Ciudad</label> 
+						<p:inputText class="form-control" id="inputCiudad" pt:placeholder="Ejemplo: Loja" required="true" />
+					</div>
+					
+					<div class="form-group col-md-6">
+						<label for="inputRucDni">RUC/DNI</label> 
+						<p:inputText class="form-control" id="inputRucDni" pt:placeholder="Ejemplo: 1716284563001" required="true" />
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputFiguraLegal">Figura Legal</label> 
+						<p:inputText class="form-control" id="inputFiguraLegal" pt:placeholder="Persona Natural / Juridica" required="true"/>
+					</div>
+	
+					<div class="form-group col-md-12">
+						<label for="inputDireccion">Dirección</label> 
+						<p:inputTextarea class="form-control" cols="50" rows="4" id="inputDireccion" pt:placeholder="Calle principal,secundaria, numero de casa" />
+					</div>
+					
+					<div class="form-group col-md-6">
+						<label for="inputTelefono">Teléfono</label> 
+						<p:inputText class="form-control" id="inputTelefono" pt:placeholder="Ejemplo: 02345678" required="true" />
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputareaStand">Area Requerida</label> 
+						<select id="inputareaStand" class="form-control">
+							<option>Seleccionar...</option>
+							<option>Área 2x2</option>
+							<option>Área 2x3</option>
+							<option>Área 2x4</option>
+						</select>
+					</div>
+					
+					<div class="form-group col-md-6">
+						<p:commandButton id="imageBtn" value="Ver stands" type="button" />
+					    <p:overlayPanel id="imagePanel" for="imageBtn" hideEffect="fade">
+					        <p:graphicImage name="/images/mapa_stands.jpg" width="300" />
+					    </p:overlayPanel>
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputnumeroStand">Numero de Stands</label> 
+						<p:inputText class="form-control" id="inputnumeroStand" pt:placeholder="Ejemplo: 4" required="true" />
+					</div>
+					
+					<div class="form-group col-md-12">
+						<label for="inputDescripcionProducto">Descripción de producto</label> 
+						<p:inputTextarea cols="50" rows="4" class="form-control" id="inputDescripcionProducto" pt:placeholder="Descripción de producto a ofertar en la feria" />
+					</div>
+
+					<h:commandButton actionListener="#{indexController.registrar}" value="Registrar" />
+				</div>
+			</h:form>
+		</div>
+	</div>
+
+	<footer class="d-flex justify-content-center text-light bg-dark">
+		<span>Ferias Loja - Leonardo Morales</span> 
+	</footer>
 </h:body>
 </html>
